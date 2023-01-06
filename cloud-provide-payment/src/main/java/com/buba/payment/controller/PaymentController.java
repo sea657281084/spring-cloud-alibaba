@@ -5,6 +5,7 @@ import com.buba.springcloud.pojo.CommonResult;
 import com.buba.springcloud.pojo.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -38,5 +39,14 @@ public class PaymentController {
         }else{
             return new CommonResult(444,"查询失败",null);
         }
+    }
+
+    @Value("${config.info}")
+    private  String configInfo;
+
+    @GetMapping("/config/info")
+    public String getConfigInfo(){
+        System.out.println(configInfo);
+        return configInfo;
     }
 }
