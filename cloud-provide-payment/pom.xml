@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>spring-cloud-alibaba</artifactId>
-        <groupId>com.buba.springcloud</groupId>
+        <groupId>com.buba</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -20,9 +20,10 @@
 
         <!-- 引入实体Module的包 -->
         <dependency>
-            <groupId>com.study.springcloud</groupId>
+            <groupId>com.buba</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

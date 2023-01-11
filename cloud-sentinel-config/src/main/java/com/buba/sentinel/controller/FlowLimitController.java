@@ -1,4 +1,4 @@
-package com.buba.sentinel.controller;
+package com.study.sentinel.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
