@@ -18,8 +18,8 @@ public class OrderController {
 //    public static final  String PAYMENT_URL = "http://localhost:8001";
     public static final  String PAYMENT_URL = "http://mcroservice-payment";
 
-    @Autowired
-    PaymentClient paymentClient;
+//    @Autowired
+//    PaymentClient paymentClient;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -35,11 +35,11 @@ public class OrderController {
  
     }
 
-    //获取id获取支付订单
-    @GetMapping("/getPaymentOpenFegin/get/{id}")
-    public CommonResult<Payment> getPaymentOpenFegin(@PathVariable("id") Long id) {
-        CommonResult<Payment> paymentCommonResult = paymentClient.paymentGet(id);
-        return paymentCommonResult;
-
-    }
+//    //获取id获取支付订单
+//    @GetMapping("/getPaymentOpenFegin/get/{id}")
+//    public CommonResult<Payment> getPaymentOpenFegin(@PathVariable("id") Long id) {
+//        CommonResult<Payment> paymentCommonResult = paymentClient.paymentGet(id);
+//        return paymentCommonResult;
+//
+//    }
 }
