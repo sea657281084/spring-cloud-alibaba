@@ -1,7 +1,7 @@
 package com.buba.consumer.controller;
  
  
-import com.buba.openfeign.client.PaymentClient;
+import com.buba.consumer.client.PaymentClient;
 import com.buba.springcloud.pojo.CommonResult;
 import com.buba.springcloud.pojo.Payment;
 import lombok.extern.slf4j.Slf4j;
@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
+
 @RestController
 @Slf4j
 public class OrderController {
@@ -18,8 +20,8 @@ public class OrderController {
 //    public static final  String PAYMENT_URL = "http://localhost:8001";
     public static final  String PAYMENT_URL = "http://mcroservice-payment";
 
-//    @Autowired
-//    PaymentClient paymentClient;
+    @Resource
+    private PaymentClient paymentClient;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -35,11 +37,11 @@ public class OrderController {
  
     }
 
-//    //获取id获取支付订单
-//    @GetMapping("/getPaymentOpenFegin/get/{id}")
-//    public CommonResult<Payment> getPaymentOpenFegin(@PathVariable("id") Long id) {
-//        CommonResult<Payment> paymentCommonResult = paymentClient.paymentGet(id);
-//        return paymentCommonResult;
-//
-//    }
+    //获取id获取支付订单
+    @GetMapping("/getPaymentOpenFegin/get/{id}")
+    public CommonResult<Payment> getPaymentOpenFegin(@PathVariable("id") Long id) {
+        CommonResult<Payment> paymentCommonResult = paymentClient.paymentGet(id);
+        return paymentCommonResult;
+
+    }
 }
