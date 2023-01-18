@@ -13,6 +13,7 @@
         <module>cloud-consumer-order</module>
         <module>cloud-sentinel-config</module>
         <module>cloud-api-openfeign</module>
+        <module>cloud-seata-product</module>
     </modules>
     <!-- 首先修改打包方式 -->
     <packaging>pom</packaging>

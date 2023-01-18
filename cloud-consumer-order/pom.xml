@@ -23,12 +23,6 @@
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.buba</groupId>-->
-<!--            <artifactId>cloud-api-openfeign</artifactId>-->
-<!--            <version>${project.version}</version>-->
-<!--&lt;!&ndash;            <scope>compile</scope>&ndash;&gt;-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -58,5 +52,7 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
+
     </dependencies>
 </project>
