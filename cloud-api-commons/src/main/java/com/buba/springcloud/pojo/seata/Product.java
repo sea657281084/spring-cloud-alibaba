@@ -3,6 +3,7 @@ package com.buba.springcloud.pojo.seata;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 
 //import javax.persistence.Entity;
@@ -21,6 +22,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
+@ToString
 public class Product {
 //   @Id
 //   @GeneratedValue(strategy = GenerationType.IDENTITY)

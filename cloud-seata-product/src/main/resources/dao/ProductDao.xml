@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dqueryByidtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.buba.product.dao.ProductDao">
+<!--    private Integer pid;//主键-->
+<!--    private String pname;//商品名称-->
+<!--    private Double pprice;//商品价格-->
+<!--    private Integer stock;//库存-->
+    <resultMap id="BaseResultMap" type="com.buba.springcloud.pojo.seata.Product">
+        <id column="pid" property="pid" jdbcType="INTEGER"/>
+        <id column="pname" property="pname" jdbcType="VARCHAR"/>
+        <id column="pprice" property="pprice" jdbcType="INTEGER"/>
+        <id column="stock" property="stock" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <insert id="update" parameterType="com.buba.springcloud.pojo.seata.Product" useGeneratedKeys="true" keyProperty="pid">
+<!--        insert into shop_product (pid,pname,pprice,stock) value (#{pid},#{pname},#{pprice},#{stock});-->
+        update shop_product set stock = #{stock} where pid = #{pid}
+    </insert>
+
+    <select id="findById" parameterType="INTEGER" resultType="com.buba.springcloud.pojo.seata.Product">
+        select * from shop_product where pid = #{pid}
+    </select>
+
+</mapper>
