@@ -7,6 +7,9 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+    alibaba:
+      seata:
+        tx-service-group: seata-tc-server #自定义事务组名称需要与seata-server中的对应
 #spring相关配置
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource  #当前数据源操作类型

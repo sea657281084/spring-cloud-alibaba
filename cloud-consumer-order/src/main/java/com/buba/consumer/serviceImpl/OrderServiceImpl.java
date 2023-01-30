@@ -5,6 +5,7 @@ import com.buba.consumer.dao.OrderDao;
 import com.buba.consumer.service.OrderService;
 import com.buba.springcloud.pojo.seata.Order;
 import com.buba.springcloud.pojo.seata.Product;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,7 @@ public class OrderServiceImpl implements OrderService {
 
 
    @Override
+   @GlobalTransactional
    public Order createOrder(Integer pid) {
       //查询指定的商品信息
       Product product = productClient.findProductByPid(pid);
