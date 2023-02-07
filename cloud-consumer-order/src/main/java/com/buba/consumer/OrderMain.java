@@ -3,6 +3,7 @@ package com.buba.consumer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @ClassName OrderMain
@@ -10,6 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @Author LHQ
  * @Date 2022/10/25 17:48
  */
+@EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
 public class OrderMain {
